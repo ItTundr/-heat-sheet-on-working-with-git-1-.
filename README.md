@@ -188,6 +188,19 @@ _modified_ (англ. «изменённый»)
 
 ---
 
+## Жизненый цикл файлов в Git. Статусы.
+
+```mermaid
+  graph TD;
+      untracked(неотслеживаемый)-->staged(в списке на коммит)+tracked: git add;
+      staged(в списке на коммит)+tracked-->tracked(отслеживаемый): git commit;
+      tracked(отслеживаемый)-->modified(изменённый): Изменения;
+      modified(изменённый)-->staged(в списке на коммит)+tracked: git add;
+      staged(в списке на коммит)+tracked-->modified(изменённый): Изменения;
+```
+
+---
+
 ## Git status 
 
 ---
