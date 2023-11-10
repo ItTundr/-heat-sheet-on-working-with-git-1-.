@@ -193,10 +193,10 @@ _modified_ (англ. «изменённый»)
 ```mermaid
   graph TD;
       untracked--git add-->staged+tracked;
-      staged+tracked-->tracked;
-      tracked-->modified;
-      modified-->staged+tracked;
-      staged+tracked-->modified;
+      staged+tracked--git commit-->tracked;
+      tracked--Изменения-->modified;
+      modified--git add-->staged+tracked;
+      staged+tracked--Изменения-->modified;
 ```
 
 ---
