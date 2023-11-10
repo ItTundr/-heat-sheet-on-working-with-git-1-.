@@ -199,7 +199,7 @@ _modified_ (англ. «изменённый»)
 
 ```mermaid
   graph TD;
-      untracked-->staged+tracked;
+      untracked-->staged+tracked: git add;
       A-->C;
       B-->D;
       C-->D;
