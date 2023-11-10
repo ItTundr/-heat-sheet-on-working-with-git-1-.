@@ -197,6 +197,14 @@ _modified_ (англ. «изменённый»)
       C[tracked(отслеживаемый)] -- Изменения --> D[modified(изменённый)];
 ```
 
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
 ---
 
 ## Git status 
