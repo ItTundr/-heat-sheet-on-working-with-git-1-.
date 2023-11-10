@@ -191,16 +191,12 @@ _modified_ (англ. «изменённый»)
 ## Жизненый цикл файлов в Git. Статусы.
 
 ```mermaid
-sequenceDiagram
-    participant dotcom
-    participant iframe
-    participant viewscreen
-    dotcom->>iframe: loads html w/ iframe url
-    iframe->>viewscreen: request template
-    viewscreen->>iframe: html & javascript
-    iframe->>dotcom: iframe ready
-    dotcom->>iframe: set mermaid data on iframe
-    iframe->>iframe: render mermaid
+  graph TD
+      untracked(неотслеживаемый)-->staged(в списке на коммит)+tracked: git add
+      staged(в списке на коммит)+tracked-->tracked(отслеживаемый): git commit
+      tracked(отслеживаемый)-->modified(изменённый): Изменения
+      modified(изменённый)-->staged(в списке на коммит)+tracked: git add
+      staged(в списке на коммит)+tracked-->modified(изменённый): Изменения
 ```
 
 ---
